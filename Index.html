@@ -1,31 +1,77 @@
 <!DOCTYPE html>
-<html lang="es-mx">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
+    <title>Inicio - Mi Portafolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: #f0f0f0;
+      }
+      .box {
+          width: 200px;
+          height: 200px;
+          background-color: blue;
+          transition: background-color 0.3s ease;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          color: white;
+          font-size: 24px;
+      }
+      .box:hover {
+          background-color: dodgerblue;
+      }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Portafolio Dev Oswaldo Baltazar Mora - - -</h1>
-    <nav>
-        <ul>
-            <li><a href="Index.html">inicio</a></li>
-            <li><a href="skills.html"></a>Habilidades</li>
-            <li><a href="#"></a>Proyectos</li>
-            <li><a href="#"></a>Contactos</li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <ul>
+              <li><a class="box" href="index.html">Inicio</a></li>
+              <li><a href="proyectos.html">Proyectos</a></li>
+              <li><a href="skills.html">Habilidades</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+              <!-- Agrega más enlaces según sea necesario -->
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="left">
+                <div class="text-content">
+                    <h1>Bienvenido a mi Portafolio</h1>
+                    <p>Hola, soy Oswaldo Baltazar Mora. Soy Ing. en teleinformàtica. Aquí podrás encontrar algunos de los proyectos en los que he trabajado y más información sobre mi experiencia.</p>
+                    <p>Estoy apasionado por [tu campo de interés] y me encanta crear soluciones creativas.. No dudes en explorar mis proyectos y ponerte en contacto conmigo si tienes alguna pregunta o si estás interesado en colaborar.</p>
+                </div>
+            </div>
+            <div class="right">
+                <img class="profile-image" src="tu-foto.jpg" alt="Tu Nombre">
+            </div>
+        </div>
+    </main>
 
+    <footer>
+        <p>&copy; 2024 Tu Nombre</p>
+    </footer>
+    <script>
+      const box = document.querySelector('.box');
 
+      box.addEventListener('mouseover', function() {
+          box.style.backgroundColor = 'dodgerblue';
+      });
 
-
-  </header>  
-  <main>
-    Contenido de la pagina
-  </main>
-  <footer>
-    <p>&copy;Desarrollado por el Constructor de la Paz </p>
-  </footer>
+      box.addEventListener('mouseout', function() {
+          box.style.backgroundColor = 'blue';
+      });
+  </script>
 </body>
 </html>
